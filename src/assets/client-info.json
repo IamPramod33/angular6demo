@@ -1,0 +1,26 @@
+[{
+    "description": "Client A desc",
+    "name": "A",
+    "id": "1",
+    "isExisting": true
+},{
+    "description": "Client B desc",
+    "name": "B",
+    "id": "2",
+    "isExisting": true
+},{
+    "description": "Client C desc",
+    "name": "C",
+    "id": "3",
+    "isExisting": false
+},{
+    "description": "Client D desc",
+    "name": "D",
+    "id": "4",
+    "isExisting": true
+},{
+    "description": "Client E desc",
+    "name": "E",
+    "id": "5",
+    "isExisting": false
+}]

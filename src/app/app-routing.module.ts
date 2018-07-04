@@ -7,7 +7,7 @@ const routes: Routes = [
     path: "admin",
     loadChildren: "../app/admin/admin.module#AdminModule"
   },
-  { path: '', redirectTo: '/admin/clients', pathMatch: 'full' },
+  { path: '', redirectTo: '/admin/clients/list', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -1,0 +1,12 @@
+<div class='client-container'>
+  <mat-card class="example-card" *ngFor="let client of clientList" [routerLink]="['../details', client.id]">
+      <mat-card-header class="card-header" >
+          <mat-card-title >
+              <h1 class="md-headline">{{client.name}}</h1>
+          </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <p>{{client.description}}</p>
+      </mat-card-content>
+  </mat-card>
+</div>
