@@ -14,33 +14,20 @@ const routes: Routes = [
       { 
         path: "clients", 
         component: ClientsComponent,
-        data: {
-          breadcrumb: "Clients"
-        },
         children: [
           { 
             path: "list",
-            component: ClientListComponent,
-            data: {
-              breadcrumb: "List"
-            }
+            component: ClientListComponent
           },{ 
             path: "details/:clientId",
-            component: ClientInfoComponent,
-            data: {
-              breadcrumb: "Client details"
-            }
+            component: ClientInfoComponent
           },
           {path: '', redirectTo: 'list', pathMatch: 'full'},]
       },
       { 
         path: "vocab",
-        component: VocabularyComponent,
-        data: {
-          breadcrumb: "Voabulary"
-        }
-      },
-      //{ path: '**', redirectTo: '/clients/list', pathMatch: 'full' }
+        component: VocabularyComponent
+      }
     ]
   }
 ];
