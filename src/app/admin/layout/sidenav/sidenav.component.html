@@ -8,7 +8,7 @@
     [opened]="!(isHandset$ | async)">
     <mat-toolbar color="primary"></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="clients">Clients</a>
+      <a mat-list-item routerLink="clients/list">Clients</a>
       <a mat-list-item routerLink="vocab">Vocabulary</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -22,7 +22,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Dashboard</span>
+      <span>Demo App</span>
       <span class="example-spacer">Hi, Admin</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
