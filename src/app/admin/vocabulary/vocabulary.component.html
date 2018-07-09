@@ -1,3 +1,10 @@
-<p>
-  vocabulary section!
-</p>
+<mat-tab-group #tabGroup [selectedIndex]="tabIndex" (selectedIndexChange)="onSelectedIndexChange($event)">
+  <mat-tab label="Sources">
+    <div class="col-md-12">
+        <vocab-source></vocab-source>
+    </div>
+  </mat-tab>
+  <mat-tab label="Add Vocabulary">
+    <add-vocabulary></add-vocabulary>
+  </mat-tab>
+</mat-tab-group>
