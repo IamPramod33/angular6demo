@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Source 1",
+    "hide": true,
+    "children": []
+  },
+  {
+    "title": "Source 2",
+    "hide": true,
+    "children": [
+      {
+        "title": "Sub Source 2-1",
+        "hide": true,
+        "children": [
+          {
+            "title": "Sub Sub Source 2-1-1",
+            "hide": true,
+            "children": [
+              {
+                "title": "Sub Sub Sub Source 2-1-1-1",
+                "hide": true,
+                "children": []
+              },
+              {
+                "title": "Sub Sub Sub Source 2-1-1-2",
+                "hide": true,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Source 3",
+    "hide": true,
+    "children": []
+  }
+]

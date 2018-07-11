@@ -1,16 +1,26 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuardService as AuthGuard} from "./shared/services/authentication/auth-guard.service";
+import { RoleGuardService } from "./shared/services/authentication/role-guard.service";
 
 const routes: Routes = [
   {
     path: "admin",
-    loadChildren: "../app/admin/admin.module#AdminModule"
+    loadChildren: "../app/admin/admin.module#AdminModule",
+    canActivate: [RoleGuardService], 
+    data: { 
+      expectedRole: 'admin'
+    } 
   },
   {
     path: "user",
     loadChildren: "../app/user/user.module#UserModule"
   },
-  { path: '', redirectTo: '/user/dashboard', pathMatch: 'full' },
+  {
+    path: "login",
+    loadChildren: "../app/login/login.module#LoginModule"
+  },
+  { path: '', redirectTo: '/admin/vocab', pathMatch: 'full' },
 ];
 
 @NgModule({

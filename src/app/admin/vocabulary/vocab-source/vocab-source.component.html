@@ -1,0 +1,16 @@
+<div class="col-md-7">
+  <ul class="vocab-wrapper list-unstyled">
+    <ng-template #recursiveList let-vocabSourceList>
+      <li *ngFor="let item of vocabSourceList; let index = index" class="vocab-list-item">
+        <span (click)="onVocabSelect(item)"> {{item.title}} </span>
+        <ul class="sub-list list-unstyled" *ngIf="item.children.length > 0 && !item.hide">
+          <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+        </ul>
+      </li>
+    </ng-template>
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: vocabSourceList }"></ng-container>
+  </ul>
+</div>
+<div class="col-md-5">
+  {{selectedList.title}}
+</div>
