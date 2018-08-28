@@ -23,8 +23,11 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "bootstrap": "^4.1.1",
+    "buffer": "^5.2.0",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "resize-image-data": "^0.1.1",
     "rxjs": "^6.2.1",
     "zone.js": "^0.8.26"
   },

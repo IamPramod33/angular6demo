@@ -20,7 +20,11 @@ const routes: Routes = [
     path: "login",
     loadChildren: "../app/login/login.module#LoginModule"
   },
-  { path: '', redirectTo: '/admin/vocab', pathMatch: 'full' },
+  {
+    path: "sales",
+    loadChildren: "../app/sales/sales.module#SalesModule"
+  },
+  { path: '', redirectTo: '/sales', pathMatch: 'full' },
 ];
 
 @NgModule({

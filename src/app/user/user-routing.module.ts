@@ -12,7 +12,8 @@ const routes: Routes = [
   {
     path: "dashboard", 
     component: UserDashboardComponent
-  },{
+  },
+  {
     path: "type", 
     component: UserNavigationComponent,
     children: [

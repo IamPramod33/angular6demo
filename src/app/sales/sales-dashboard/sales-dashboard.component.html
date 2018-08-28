@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Sales Dashboard</h6>
+    <add-sales-strip></add-sales-strip>
+</div>
+<canvas #myCanvas width="480" height="320"></canvas>
