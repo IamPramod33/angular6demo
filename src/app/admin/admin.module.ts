@@ -17,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { SharedServiceModule } from '../shared/services/shared-service/shared-service.module';
 import { VocabSourceComponent } from './vocabulary/vocab-source/vocab-source.component';
 import { AddVocabularyComponent } from './vocabulary/add-vocabulary/add-vocabulary.component';
+import { PdfViewModule } from '../shared/modules/pdf-viewer/pdf-viewer.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { AddVocabularyComponent } from './vocabulary/add-vocabulary/add-vocabula
     HttpClientModule,
     SharedServiceModule,
     MatTabsModule,
-    MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule
+    MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, PdfViewModule
   ],
   providers:[ClientService],
   declarations: [DashboardComponent,SidenavComponent, ClientsComponent, VocabularyComponent, ClientInfoComponent, ClientListComponent, VocabSourceComponent, AddVocabularyComponent]

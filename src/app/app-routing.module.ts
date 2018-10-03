@@ -17,10 +17,14 @@ const routes: Routes = [
     loadChildren: "../app/user/user.module#UserModule"
   },
   {
+    path: "examples",
+    loadChildren: "../app/examples/examples.module#ExamplesModule"
+  },
+  {
     path: "login",
     loadChildren: "../app/login/login.module#LoginModule"
   },
-  { path: '', redirectTo: '/admin/vocab', pathMatch: 'full' },
+  { path: '', redirectTo: '/examples', pathMatch: 'full' },
 ];
 
 @NgModule({
