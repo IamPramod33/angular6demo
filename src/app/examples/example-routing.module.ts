@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ExamplesListComponent } from './examples-list/examples-list.component';
-import { SmartComponent } from './smart/smart.component';
 
 const routes: Routes = [
   { 
@@ -15,6 +14,10 @@ const routes: Routes = [
       { 
         path: "uitree",
         loadChildren: "../examples/ui-tree/ui-tree.module#UiTreeModule"
+      },
+      { 
+        path: "elements",
+        loadChildren: "../examples/element-setup/element-setup.module#ElementSetupModule"
       }
     ]
   }

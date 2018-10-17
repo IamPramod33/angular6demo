@@ -1,0 +1,28 @@
+  <div>
+    <div *ngFor="let todo of todos | async">
+      <div class="section" *ngIf="todo.type === 'table'">
+        <h1>Table: </h1>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>D</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section" *ngIf="todo.type === 'omr'">
+        <h1>OMR</h1>
+        <label>Yes</label><input type="text" />
+        <label>No</label><input type="text" />
+      </div>
+      <div class="section" *ngIf="todo.type === 'ss'">
+        <h1>Sub Section</h1>
+        <add-element-strip [elementType]='todo.id'></add-element-strip>
+      </div>
+    </div>
+  </div>
