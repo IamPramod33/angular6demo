@@ -1,0 +1,9 @@
+<div>
+    Selected Team
+</div>
+<div 
+  (drop)="onDrop($event)" 
+  dragOverClass="drop-over-active" 
+  class="user-info" mwlDroppable>
+  <span >{{ droppedData.fName }} {{ droppedData.lName }}</span>
+</div>

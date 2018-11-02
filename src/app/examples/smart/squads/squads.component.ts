@@ -3,23 +3,16 @@ import { Component, OnInit } from '@angular/core';
 import { DropEvent } from 'angular-draggable-droppable';
 
 @Component({
-  selector: 'app-smart',
-  templateUrl: './smart.component.html',
-  styleUrls: ['./smart.component.css']
+  selector: 'app-squads',
+  templateUrl: './squads.component.html',
+  styleUrls: ['./squads.component.css']
 })
-export class SmartComponent implements OnInit {
+export class SquadsComponent implements OnInit {
 
+  
+  availableUserData: any;
   constructor() { }
 
-  droppedData: Object = {};
-  availableUserData: any;
-  onDrop({ dropData }: DropEvent<Object>): void {
-    this.droppedData = dropData;
-    // setTimeout(() => {
-    //   this.droppedData = '';
-    // }, 2000);
-  }
-  
   ngOnInit() {
     this.availableUserData = [{
       id: '045',
@@ -50,7 +43,6 @@ export class SmartComponent implements OnInit {
       fName: 'Chris',
       lName: 'Gayle'
     }]
-
   }
 
 }

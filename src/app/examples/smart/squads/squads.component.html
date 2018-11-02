@@ -1,0 +1,6 @@
+<div>
+  <h4>Available Players</h4>
+</div>
+<div *ngFor="let i of availableUserData">
+  <div [dropData]="i" dragActiveClass="drag-active" mwlDraggable class="user-info">{{i.fName}} {{i.lName}}</div>
+</div>

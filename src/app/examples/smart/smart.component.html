@@ -1,3 +1,34 @@
-<p>
-  smart works!
-</p>
+<!-- <div mwlDraggable dropData="foo" dragActiveClass="drag-active">
+  Drag me!
+</div>
+<div mwlDraggable dropData="bar" dragActiveClass="drag-active" [dragSnapGrid]="{x: 100, y: 100}">
+  I snap to a 100 x 100 grid
+</div>
+<div
+  mwlDroppable
+  (drop)="onDrop($event)"
+  dragOverClass="drop-over-active">
+  <span [hidden]="droppedData">Drop here</span>
+  <span [hidden]="!droppedData">Item dropped here with data: "{{ droppedData }}"!</span>
+</div> -->
+<div class="row col-lg-12">
+  <div class="col-lg-6">
+      <div>
+          <h4>Available Players</h4>
+        </div>
+        <div *ngFor="let i of availableUserData">
+          <div [dropData]="i" dragActiveClass="drag-active" mwlDraggable class="user-info">{{i.fName}} {{i.lName}}</div>
+        </div>
+  </div>
+  <div class="col-lg-6">
+      <div>
+          Selected Team
+      </div>
+      <div 
+        (drop)="onDrop($event)" 
+        dragOverClass="drop-over-active" 
+        class="user-info" mwlDroppable>
+        <span >{{ droppedData.fName }} {{ droppedData.lName }}</span>
+      </div>
+  </div>
+</div>
